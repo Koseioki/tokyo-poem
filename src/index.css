@@ -35,6 +35,8 @@ html {
 
   color: var(--text-color);
   line-height: 2;
+   max-height: 100vh;
+
   /* overflow: hidden; */
 
 }
