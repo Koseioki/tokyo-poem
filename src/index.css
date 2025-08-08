@@ -6,19 +6,42 @@
   --header-background: #f0f0f0;
   --poem-background: rgba(255, 255, 255, 0.9);
   --text-color: #333;
-    margin: 0;
+  --focus-indicator: 0 0 0 0.125rem #F6F6F6, 0 0 0 0.25rem #238CEC;
+  margin: 0;
   padding: 0;
+
 }
-body{
+
+
+html {
+  background-image: url('./assets/bg.jpeg');
+  background-size: fill;
+  background-position: center;
+}
+
+body {
 
   font-family: Shippori Mincho, sans-serif;
   font-size: 1rem;
   writing-mode: vertical-rl;
-  background-image: url('./assets/bg.jpeg');
-  background-size: fill;
-  background-position: center;
+
   color: var(--text-color);
   line-height: 2;
+}
+
+a{
+  color: var(--text-color);
+  text-decoration: underline;
+}
+a:hover {
+  text-decoration: none;
+}
+
+a:focus {
+  box-shadow: var(--focus-indicator);
+  outline: none;
+  /* color: red; */
+
 }
 
 header {
@@ -31,6 +54,15 @@ header {
   justify-content: space-between;
 }
 
+.title{
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+
+
 .poem-container {
   background-color: var(--poem-background);
   /* margin: 2rem; */
@@ -38,6 +70,6 @@ header {
   text-align: left;
 }
 
-.poem-container p{
+.poem-container p {
   margin: 0 3rem;
 }
