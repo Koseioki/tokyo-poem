@@ -6,15 +6,17 @@ import Home from './Home'
 
 function App() {
   return (
-    <Router basename="/tokyo-poem">
-      <Header />
-      <main>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-      </Routes>
-      </main>
-    </Router>
+      <Router basename={import.meta.env.PROD ? "/tokyo-poem" : "/"}>
+        <div className="background">
+
+          <Header />
+
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+            </Routes>
+        </div>
+      </Router>
 
   )
 }

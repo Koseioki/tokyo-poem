@@ -12,53 +12,88 @@
 
 }
 
-
-html {
+.background {
   background-image: url('./assets/bg.jpeg');
-  background-size: fill;
+  background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
-body {
 
-  font-family: Shippori Mincho, sans-serif;
-  font-size: 1rem;
+body,
+html {
+
+  font-family: Shippori Mincho, serif;
+  font-size: 1.1rem;
   writing-mode: vertical-rl;
 
   color: var(--text-color);
   line-height: 2;
+  overflow: hidden;
+
 }
 
-a{
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+a {
   color: var(--text-color);
   text-decoration: underline;
 }
+
 a:hover {
   text-decoration: none;
 }
 
 a:focus {
   box-shadow: var(--focus-indicator);
-  outline: none;
+  /* outline: none; */
   /* color: red; */
 
 }
 
+dd {
+  margin-top: 3rem;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
 header {
   background-color: var(--header-background);
-  padding: 2rem 1rem;
-  margin-left: 2rem;
+  padding: 3rem 1rem;
+  margin: 2rem;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
 }
 
-.title{
-  font-size: 2rem;
+.title {
+  font-size: 1.5rem;
   font-weight: 600;
   color: var(--text-color);
   text-decoration: none;
+}
+
+.title:hover {
+  color: black;
 }
 
 
@@ -67,9 +102,13 @@ header {
   background-color: var(--poem-background);
   /* margin: 2rem; */
   padding: 3rem;
+  margin: 2rem;
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+
   text-align: left;
 }
 
 .poem-container p {
-  margin: 0 3rem;
+  margin: 0 4rem;
 }

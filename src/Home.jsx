@@ -1,6 +1,7 @@
 export default function Home() {
   return (
       <section className="poem-container">
+        <h1 className="sr-only">最近のポエム</h1>
         <p>赤ちゃんのこといつも「ｴｹﾁｪﾝ」とか「赤子」とかふざけた呼び方して、全然「赤ちゃん」と思ったことないな</p>
         <p>散歩してて羊がいたので羊だ！と思って近づいたら、岩だった
         </p>
