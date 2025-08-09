@@ -13,6 +13,7 @@
 }
 
 html {
+  background-color: var(--text-color);
   background-image: url('./assets/bg.jpeg');
   background-size: fill;
   background-position: center;
@@ -26,12 +27,12 @@ html {
 }
 
 
-body,
-html {
+body{
 
   font-family: Shippori Mincho, serif;
   font-size: 1.1rem;
   writing-mode: vertical-rl;
+  /* background-color: black; */
 
   color: var(--text-color);
   line-height: 2;
@@ -106,8 +107,8 @@ header {
   /* margin: 2rem; */
   padding: 3rem;
   margin: 2rem;
-  /* overflow-x: scroll; */
-  /* -webkit-overflow-scrolling: touch; */
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
 
   text-align: left;
 }
