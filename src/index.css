@@ -6,7 +6,8 @@
   --header-background: #f0f0f0;
   --poem-background: rgba(255, 255, 255, 0.9);
   --text-color: #333;
-  --focus-indicator: 0 0 0 0.125rem #F6F6F6, 0 0 0 0.25rem #238CEC;
+  --focus-indicator: 0 0 0 0.25rem #F6F6F6, 0 0 0 0.5rem #238CEC;
+  --focus-indicator-inset: inset 0 0 0 0.25rem #238CEC, 0 0 0 0.5rem #F6F6F6;
   margin: 0;
   padding: 0;
 
@@ -31,13 +32,11 @@ body{
   font-family: Shippori Mincho, serif;
   font-size: 1.1rem;
   writing-mode: vertical-rl;
-  /* background-color: black; */
 
   color: var(--text-color);
   line-height: 2;
    max-height: 100dvh;
 
-  /* overflow: hidden; */
 
 }
 
@@ -63,9 +62,7 @@ a:hover {
 
 a:focus {
   box-shadow: var(--focus-indicator);
-  /* outline: none; */
-  /* color: red; */
-
+  outline: none;
 }
 
 dd {
@@ -75,7 +72,7 @@ dd {
 h1 {
   font-size: 2rem;
   font-weight: 600;
-  margin: 0 2rem;
+  margin: 2rem 2rem;
 }
 
 header {
@@ -99,12 +96,45 @@ header {
   color: black;
 }
 
+ul.poem-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0rem;
+}
+
+ul.poem-list li {
+    /* border: 1px solid red; */
+    padding: 2rem 3rem;
+
+}
+
+a.poem-item{
+  text-decoration: none;
+  display: flex;
+  /* border: solid 1px blue; */
+  flex-direction: column;
+  padding: 2rem 3rem;
+  margin: -2rem -3rem;
+}
+
+a.poem-item:hover {
+  background-color: var(--header-background);
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);
+}
+
+a.poem-item:focus {
+  outline: none;
+  box-shadow: var(--focus-indicator-inset);
+}
+
 
 
 .poem-container {
   background-color: var(--poem-background);
-  /* margin: 2rem; */
-  padding: 3rem;
+  /* padding: 3rem; */
   margin: 2rem;
   overflow-x: scroll;
   -webkit-overflow-scrolling: touch;
@@ -112,9 +142,10 @@ header {
   text-align: left;
 }
 
-.poem-container p {
+/* .poem-container p {
   margin: 0 4rem;
-}
+} */
+
 
 @media (max-height: 600px) {
 
