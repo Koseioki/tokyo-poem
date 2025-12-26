@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <section className="poem-container">
+    <section className="poem-container poem-container-padding">
       <h1>このページについて</h1>
       <dl>
         <dt>作者・詠み人</dt>

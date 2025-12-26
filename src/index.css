@@ -27,7 +27,7 @@ html {
 }
 
 
-body{
+body {
 
   font-family: Shippori Mincho, serif;
   font-size: 1.1rem;
@@ -35,7 +35,7 @@ body{
 
   color: var(--text-color);
   line-height: 2;
-   max-height: 100dvh;
+  max-height: 100dvh;
 
 
 }
@@ -106,15 +106,19 @@ ul.poem-list {
 }
 
 ul.poem-list li {
-    /* border: 1px solid red; */
-    padding: 2rem 3rem;
+  /* border: 1px solid red; */
+  padding: 2rem 3rem;
 
 }
 
-a.poem-item{
+.poem-item {
+  font-size: 1.2rem;
+
+}
+
+a.poem-item {
   text-decoration: none;
   display: flex;
-  /* border: solid 1px blue; */
   flex-direction: column;
   padding: 2rem 3rem;
   margin: -2rem -3rem;
@@ -134,12 +138,15 @@ a.poem-item:focus {
 
 .poem-container {
   background-color: var(--poem-background);
-  /* padding: 3rem; */
   margin: 2rem;
   overflow-x: scroll;
   -webkit-overflow-scrolling: touch;
 
   text-align: left;
+}
+
+.poem-container-padding {
+  padding: 2rem 3rem;
 }
 
 /* .poem-container p {
@@ -149,14 +156,17 @@ a.poem-item:focus {
 
 @media (max-height: 600px) {
 
-  body, html{
+  body,
+  html {
     font-size: 1rem;
   }
-  header{
+
+  header {
     padding: 2rem 1rem;
     margin: 1rem;
   }
-  .poem-container  {
+
+  .poem-container {
     margin: 1rem;
     padding: 2rem 1rem;
   }
